@@ -7,3 +7,9 @@ function createGrid() {
     grid.appendChild(div);
   }
 }
+
+let gridItem = document.querySelector(".gridItem");
+
+gridItem.addEventListener("mouseover", (draw) => {
+  gridItem.classList.add("hover");
+});
