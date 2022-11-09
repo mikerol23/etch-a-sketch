@@ -13,3 +13,8 @@ function createGrid() {
     });
   });
 }
+
+let btn = document.querySelector(".gridSize");
+btn.addEventListener("click", () => {
+  window.prompt("Grid density:", 300);
+});
