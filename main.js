@@ -6,10 +6,10 @@ function createGrid() {
     div.classList.add("gridItem");
     grid.appendChild(div);
   }
+  let pixels = document.querySelectorAll(".gridItem");
+  pixels.forEach((pixel) => {
+    pixel.addEventListener("mouseover", () => {
+      pixel.classList.add("hover");
+    });
+  });
 }
-
-let gridItem = document.querySelector(".gridItem");
-
-gridItem.addEventListener("mouseover", (draw) => {
-  gridItem.classList.add("hover");
-});
