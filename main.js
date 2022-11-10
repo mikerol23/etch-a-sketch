@@ -11,6 +11,9 @@ btn.addEventListener("click", () => {
 });
 
 function createGrid(size) {
+  document.querySelectorAll(".gridItem").forEach((item) => {
+    item.remove();
+  });
   let total = size * size;
   for (let i = 0; i < total; i++) {
     let div = document.createElement("div");
