@@ -1,7 +1,7 @@
 let grid = document.querySelector("#container");
 
-let btn = document.querySelector(".gridSize");
-btn.addEventListener("click", () => {
+let input = document.querySelector(".gridSize");
+input.addEventListener("click", () => {
   let resolution = window.prompt("Grid density:", 50);
   if (resolution > 0 && resolution < 101) {
     createGrid(resolution);
@@ -29,3 +29,10 @@ function createGrid(size) {
     });
   });
 }
+
+let erase = document.querySelector(".erase");
+erase.addEventListener("click", () => {
+  document.querySelectorAll(".gridItem").forEach((pixel) => {
+    pixel.classList.remove("hover");
+  });
+});
